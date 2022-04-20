@@ -16,7 +16,7 @@ pygame.mixer.init()
 screen=pygame.display.set_mode([dw,dh])
 pygame.display.set_caption("side scroller game")
 clock=pygame.time.Clock()
-bg=pygame.image.load('bg.png')
+bg=pygame.image.load('newbg.jpg')
 bw,bh=bg.get_rect().size
 sw=bw
 vec=pygame.math.Vector2
@@ -143,7 +143,7 @@ class Game:
     def draw(self):
         
         self.all_sprites.draw(screen)
-        self.msg('Score:'+str(self.score),blue,30,250,10)
+        self.msg('Score:'+str(self.score),red,30,250,10)
         pygame.display.flip()
     def run(self):
         while 1:
