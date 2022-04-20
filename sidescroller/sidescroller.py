@@ -1,3 +1,4 @@
+from tkinter import colorchooser
 import pygame,random,time
 pygame.init()
 black=(0,0,0)
