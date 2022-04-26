@@ -1,4 +1,6 @@
 from tkinter import colorchooser
+#from tkinter import *
+#from PIL import ImageTk, Image
 import pygame,random,time
 pygame.init()
 black=(0,0,0)
@@ -12,17 +14,32 @@ purple=(255,0,255)
 light_blue=(0,255,255)
 dh=447
 dw=600
+#win=Tk()
+#win.geometry("800x600")
 pygame.init()
 pygame.mixer.init()
 screen=pygame.display.set_mode([dw,dh])
-pygame.display.set_caption("side scroller game")
+pygame.display.set_caption("Cody's New Side Scroller Game")
 clock=pygame.time.Clock()
 bg=pygame.image.load('newbg.jpg')
+#bg=ImageTk.PhotoImage(file="newbg.jpg")
+#canvas=Canvas(win, width=800, height=4000)
+#canvas.pack(fill=BOTH, expand=True)
+#canvas.create_image(0, 0, image=bg, anchor='nw')
+#def resize_image(e):
+    #global image, resized, image2
+    #image=Image.open("newbg.jpg")
+    #resized=image.resize((e.width, e.height), Image.ANTIALIAS)
+
+    #image2=ImageTk.PhotoImage(resized)
+    #canvas.create_image(0, 0, image=image2, anchor='nw')
+#win.bind("<Configure>", resize_image)
+#win.mainloop()
 bw,bh=bg.get_rect().size
 sw=bw
 vec=pygame.math.Vector2
-rpimg=[pygame.image.load(str(i)+'.png').convert_alpha() for i in range(8,10)]
-jpimg=[pygame.image.load(str(i)+'.png').convert_alpha() for i in range(1,8)]
+rpimg=[pygame.image.load(str(i)+'.png').convert_alpha() for i in range(1,11)]
+jpimg=[pygame.image.load(str(i)+'.png').convert_alpha() for i in range(1,11)]
 sawimg=[pygame.image.load("SAW"+str(i)+'.png').convert_alpha() for i in range(4)]
 class Player(pygame.sprite.Sprite):
     def __init__(self,game):
