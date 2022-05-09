@@ -12,8 +12,8 @@ yellow=(255,255,0)
 blue=(0,0,255)
 purple=(255,0,255)
 light_blue=(0,255,255)
-dh=447
-dw=600
+dh=600
+dw=800
 #win=Tk()
 #win.geometry("800x600")
 pygame.init()
